@@ -33,6 +33,11 @@ namespace StorybrewScripts
 
             bg.Fade(104645, 1);
             bg.Fade(104980, 0);
+
+            bg.Fade(110846, 1);
+            bg.Fade(111348, 0);
+
+            bg.Fade(114030,115203,1,0);
             var bg1 = GetLayer("bg1").CreateSprite("sb/1.jpg",OsbOrigin.Centre);
             bg1.Scale(37103,480.0f / bitmap.Height);
             bg1.Fade(37103,1);
@@ -52,6 +57,11 @@ namespace StorybrewScripts
             bg1.Fade(104980,1);
             bg1.Fade(105315,0);           
 
+            bg1.Fade(111348,1);
+            bg1.Fade(111851,0);   
+
+            bg1.Fade(113527,1);
+            bg1.Fade(113695,0);  
 
             var bg2 = GetLayer("bg2").CreateSprite("sb/2.jpg",OsbOrigin.Centre);
             bg2.Scale(14309,480.0f / bitmap.Height);
@@ -71,6 +81,14 @@ namespace StorybrewScripts
             bg2.Fade(105315,1);
             bg2.Fade(105482,0);
 
+            bg2.Fade(110510,1);
+            bg2.Fade(110846,0);
+
+            bg2.Fade(111851,1);
+            bg2.Fade(112354,0);
+
+            bg2.Fade(113862,1);
+            bg2.Fade(114030,0);
             var bg3 = GetLayer("bg3").CreateSprite("sb/3.jpg",OsbOrigin.Centre);
             bg3.Scale(26376,480.0f / bitmap.Height);
             bg3.Fade(26376,1);
@@ -89,6 +107,15 @@ namespace StorybrewScripts
 
             bg3.Fade(94589,1);
             bg3.Fade(94756,0);
+
+            bg3.Fade(110175,1);
+            bg3.Fade(110510,0);
+
+            bg3.Fade(112354,1);
+            bg3.Fade(112857,0);
+
+            bg3.Fade(113695,1);
+            bg3.Fade(113862,0);
 
             var bg4 = GetLayer("bg4").CreateSprite("sb/4.jpg",OsbOrigin.Centre);
             bg4.Scale(19505,480.0f / bitmap.Height);
@@ -109,6 +136,11 @@ namespace StorybrewScripts
             bg4.Fade(94086,1);
             bg4.Fade(94337,0);
 
+            bg4.Fade(105482,1);
+            bg4.Fade(108164,0);
+
+            bg4.Fade(112857,1);
+            bg4.Fade(113192,0);
             var blackAndWhite = GetLayer("BlackAndWhite").CreateSprite("sb/BlackAndWhite.jpg",OsbOrigin.Centre);
             blackAndWhite.Scale(16991,480.0f / bitmap.Height);
             blackAndWhite.Fade(16991,1);
@@ -133,6 +165,12 @@ namespace StorybrewScripts
 
             blackAndWhite.Fade(102801,1);
             blackAndWhite.Fade(104645,0);
+
+            blackAndWhite.Fade(108164,1);
+            blackAndWhite.Fade(110175,0);
+
+            blackAndWhite.Fade(113192,1);
+            blackAndWhite.Fade(113527,0);
 
             var bgWhite = GetLayer("White").CreateSprite("sb/white.jpg", OsbOrigin.Centre);
             var bitmapWhite = GetMapsetBitmap("sb/white.jpg");
@@ -176,6 +214,25 @@ namespace StorybrewScripts
 
             bgWhite.Fade(102801,104142,0.4,0);
 
+            bgWhite.Fade(105482,106823,0.4,0);
+
+            bgWhite.Fade(108164,109505,0.4,0);
+
+            bgWhite.Fade(110846,111348,0.3,0);
+
+            bgWhite.Fade(111348,111851,0.3,0);
+
+            bgWhite.Fade(111851,112354,0.3,0);
+
+            bgWhite.Fade(112857,113192,0.3,0);
+
+            bgWhite.Fade(113192,113527,0.3,0);
+
+            bgWhite.Fade(112354,112857,0.3,0);  
+
+            bgWhite.Fade(113527,114030,0.3,0); 
+
+            bgWhite.Fade(114030,115203,0.3,0);  
             var zoom2 = GetLayer("zoom2").CreateSprite("sb/2.jpg",OsbOrigin.Centre);
             var redScale = 480.0f / bitmap.Height;
 
@@ -234,6 +291,9 @@ namespace StorybrewScripts
             zoom.Scale(102131,102801, scale * 1.15, scale);
             zoom.Fade(102131,102801,0.7,0);
 
+            zoom.Scale(105482,106823, scale,  scale * 1.2);
+            zoom.Fade(105482,106823,0.7,0);
+
             var noise1 = GetLayer("noise").CreateSprite("sb/Noise1.jpg", OsbOrigin.Centre);
             var bitmapNoise1 = GetMapsetBitmap("sb/Noise1.jpg");
             noise1.Scale(13304,480.0f / bitmapNoise1.Height);
@@ -256,6 +316,7 @@ namespace StorybrewScripts
             GenerateNoise(21851,22354,bgNoise);
 
             GenerateNoise(102131,102801,bgNoise);
+            GenerateNoise(107494,108164,bgNoise);
 
             //black and white noise
             List<OsbSprite> bgNoiseBlackAndWhite = new List<OsbSprite>();
@@ -285,12 +346,6 @@ namespace StorybrewScripts
             highlight.Scale(OsbEasing.InCubic,70287,71963,0.1,7);
             highlight.Fade(71963,0);
 
-            var mask = GetLayer("mask").CreateSprite("sb/Border Mask.png",OsbOrigin.Centre);
-            var maskBitmap = GetMapsetBitmap("sb/Border Mask.png");
-            mask.Scale(14309,480.0f / maskBitmap.Height);
-            mask.Fade(14309,0.4);
-            mask.Fade(26376,0);
-
             var spotlight = GetLayer("spotlight").CreateSprite("sb/spotlight.png",OsbOrigin.Centre,new Vector2(320,-50));
             spotlight.Fade(23695,24030,0,1);
             spotlight.MoveY(23695,24030,-50,240);
@@ -298,6 +353,15 @@ namespace StorybrewScripts
             spotlight.ScaleVec(24030,24357,0.3,1,10,1);
 
             spotlight.Fade(24365,25036,1,0);
+
+
+            spotlight.Fade(109505,109840,0,1);
+            spotlight.MoveY(109505,109840,-50,240);
+            spotlight.ScaleVec(109505,109840,0.1,0.1,0.3,1);
+            spotlight.ScaleVec(109840,110175,0.3,1,10,1);
+
+            spotlight.Fade(110175,110510,1,0);
+
 
             var oldStyle = GetLayer("old").CreateSprite("sb/OldStyle.jpg",OsbOrigin.Centre);
             var bitmapOld = GetMapsetBitmap("sb/OldStyle.jpg");
@@ -400,6 +464,7 @@ namespace StorybrewScripts
             GeneratePewPew(75985,77996,piecesList);
             GeneratePewPew(86712,88723,piecesList);
             GeneratePewPew(102801,104142,piecesList);
+            GeneratePewPew(108164,109505,piecesList);
 
         }
         public void GenerateNoise(double startTime, double endTime, List<OsbSprite> bgNoise){
